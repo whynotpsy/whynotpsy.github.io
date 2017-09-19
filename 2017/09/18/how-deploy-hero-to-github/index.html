@@ -83,7 +83,7 @@
 <p>安装完成后就是新建一个文件目录并初始化一下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir blog</div><div class="line">hexo init</div></pre></td></tr></table></figure></p>
 <p>要把hexo发布到github，那么需要配置下 _config.yml的deploy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:&#123;username&#125;/&#123;username&#125;.github.io.git //这里是ssh，看你用http还是ssh了，都可以，直接去copy github里你创建的blog仓库地址即可</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
 <p>注意以上冒号后面均有空格！否则发布一定不成功。<br>那hexo常用命令如下：<br>hexo clean 清除发布目录<br>hexo generate / hexo g 创建发布内容<br>hexo deploy 发布<br>hexo server 本地服务<br>hexo new 创建文章<br>hexo new page 创建页面</p>
-<p>具体不赘述，可以查看hexo官方文档</p>
+<p>具体不赘述，可以查看hexo官方文档<br><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">markdown参考</a></p>
 
         
       </div>

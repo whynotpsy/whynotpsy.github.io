@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>whynotpsy</title>
+  <title>SFBT在家庭正面管教中的应用 | whynotpsy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
@@ -41,8 +41,7 @@
   </header>
   <div id="main-content" class="wrap">
   <div class="inner">
-    
-  <article class="post">
+    <article class="post">
   <div class="pure-g">
 
     <!-- article: meta -->
@@ -62,7 +61,7 @@
       <header><div class="article-title">
         
   
-    <h1 class="title"><a href="/2017/09/19/sfbt-in-family-education/">SFBT在家庭正面管教中的应用</a></h1>
+    <h1 class="title">SFBT在家庭正面管教中的应用</h1>
   
 
       </div></header>
@@ -104,79 +103,17 @@
       </div>
       <footer><div class="article-comment">
         
+<section id="comment">
+  <h1 class="title">comment</h1>
+
+  
+</section>
+
 
       </div></footer>
     </div>
   </div>
 </article>
-
-
-  <article class="post">
-  <div class="pure-g">
-
-    <!-- article: meta -->
-    <div class="pure-u-1-12 article-meta">
-      <div class="date"><time datetime="2017-09-18T07:07:06.000Z">
-        <div class="day">18</div>
-        <div class="month">Sep 2017</div>
-      </time></div>
-      <div class="article-tags">
-        
-
-      </div>
-    </div>
-
-    <!-- article: main -->
-    <div class="pure-u-11-12">
-      <header><div class="article-title">
-        
-  
-    <h1 class="title"><a href="/2017/09/18/how-deploy-hero-to-github/">第一篇还是给如何hexo在github发布你的BLOG</a></h1>
-  
-
-      </div></header>
-      <div class="article-entry">
-        
-          <h2 id="安装各种环境"><a href="#安装各种环境" class="headerlink" title="安装各种环境"></a>安装各种环境</h2><p>因为各系统不同就不做赘述，如果你是用Mac，必须要安装Node,Xcode自带git。<br>当然你还需要Github账号，并且建立你的BLOG仓库。注意BLOG仓库必须用{username}.github.io命名，否则发布后无法访问。</p>
-<h3 id="特别讲一下SSH-Github"><a href="#特别讲一下SSH-Github" class="headerlink" title="特别讲一下SSH Github"></a>特别讲一下SSH Github</h3><p>如果你需要SSH Github，你首先要创建一个SSH Key.<br>可以在终端先查询下你的SSH Key的情况<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">cd</span> ~/.ssh</div><div class="line">ls id_*</div></pre></td></tr></table></figure></p>
-<p>新建一个Key<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></div></pre></td></tr></table></figure></p>
-<p>回车后是</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/Users/xxx/.ssh/id_rsa)：</div><div class="line">//输入文件保存的地址，如果不想改变，可以直接回车，但是是会同名替换。</div><div class="line">//如果你需要两个key，比如一个给公司的stash，一个用于github，那么你就要重命名一个，如：id_rsa_github</div><div class="line">//当中有设置密码选项，可以设置页可以不设置</div></pre></td></tr></table></figure>
-<p>现在密钥已创建好，你可以用以下命令将公钥copy出来</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pbcopy &lt; ~/.ssh/id_rsa.pub</div></pre></td></tr></table></figure>
-<p>把复制出来的公钥黏贴到github里</p>
-<p>把你的SSH key 添加到ssh-agent, 编辑config文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Host * //这里如果你不只一个key，必须配置这一下，比如Host github.com</div><div class="line"> AddKeysToAgent yes</div><div class="line"> UseKeychain yes</div><div class="line"> IdentityFile ~/.ssh/id_rsa //这里是你使用的私钥文件</div></pre></td></tr></table></figure></p>
-<p>然后添加你的私钥和储存密码（如果有）<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-add -K ~/.ssh/id_rsa</div></pre></td></tr></table></figure></p>
-<p>然后让我们做一个测试<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
-<p>输出<br>Hi stefzhlg! You’ve successfully authenticated, but GitHub does not provide shell access.<br>就表示成功的连上github了</p>
-<h2 id="安装HEXO"><a href="#安装HEXO" class="headerlink" title="安装HEXO"></a>安装HEXO</h2><p>对除了环境外，就是全局安装HEXO<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure></p>
-<p>安装完成后就是新建一个文件目录并初始化一下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">mkdir blog</div><div class="line">hexo init</div></pre></td></tr></table></figure></p>
-<p>要把hexo发布到github，那么需要配置下 _config.yml的deploy<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repo: git@github.com:&#123;username&#125;/&#123;username&#125;.github.io.git //这里是ssh，看你用http还是ssh了，都可以，直接去copy github里你创建的blog仓库地址即可</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
-<p>注意以上冒号后面均有空格！否则发布一定不成功。<br>那hexo常用命令如下：<br>hexo clean 清除发布目录<br>hexo generate / hexo g 创建发布内容<br>hexo deploy 发布<br>hexo server 本地服务<br>hexo new 创建文章<br>hexo new page 创建页面</p>
-<p>具体不赘述，可以查看hexo官方文档<br><a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">markdown参考</a></p>
-
-        
-      </div>
-      <footer><div class="article-comment">
-        
-
-      </div></footer>
-    </div>
-  </div>
-</article>
-
-
-
-<div class="pure-g bitpager">
-  <div class="pure-u-1-12"></div>
-  <div class="pure-u-1-4">
-    
-  </div>
-  <div class="pure-u-5-12"></div>
-  <div class="pure-u-1-4">
-    
-  </div>
-</div>
 
   </div>
   </div>
